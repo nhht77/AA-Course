@@ -24,7 +24,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String name = textEdit.getText().toString();
-                textView.setText("Hello " + name + " from London");
+
+                if (name.isEmpty() && name == null && name.length() < 0) {
+                    textView.setText("Please Type Your name");
+                } else {
+                    textView.setText("Hello " + name + " from London");
+                }
             }
         });
 
@@ -32,7 +37,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String name = textEdit.getText().toString();
-                textView.setText("Moi " + name + " Oulusta");
+                if (name == null && name.length() < 0) {
+                    textView.setText("Please Type Your name");
+                } else {
+                    textView.setText("Moi " + name + " Oulusta");
+                }
             }
         });
 
@@ -40,7 +49,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String name = textEdit.getText().toString();
-                textView.setText("東京からこんにちは " + name);
+                if (name == null && name.length() < 0) {
+                    textView.setText("Please Type Your name");
+                } else {
+                    textView.setText("東京からこんにちは " + name);
+                }
             }
         });
 
@@ -48,7 +61,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String name = textEdit.getText().toString();
-                textView.setText("西安你好 " + name);
+                if (name == null && name.length() < 0) {
+                    textView.setText("Please Type Your name");
+                } else {
+                    textView.setText("西安你好 " + name);
+                }
             }
         });
     }
