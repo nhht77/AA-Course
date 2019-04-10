@@ -1,10 +1,10 @@
 package trung.nguyen.zoo;
 
+import android.content.Context;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -12,13 +12,11 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import static trung.nguyen.zoo.R.raw.bear;
-
 public class MainActivity extends AppCompatActivity {
 
     TextView textMammals;
     ImageView imageView, imageView2, imageView3, imageView4;
-    MediaPlayer mediaPlayer1, mediaPlayer2, mediaPlayer3, mediaPlayer4;
+    MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,34 +29,8 @@ public class MainActivity extends AppCompatActivity {
         imageView3   = (ImageView) findViewById(R.id.imageView3);
         imageView4   = (ImageView) findViewById(R.id.imageView4);
 
-        String tag1 = imageView.getTag().toString();
-//        String tag2 = imageView2.getTag().toString();
-//        String tag3 = imageView3.getTag().toString();
-//        String tag4 = imageView4.getTag().toString();
+        String tag   = imageView.getTag().toString();
 
-        if(tag1 == "Bear"){
-            mediaPlayer1 = MediaPlayer.create(this, R.raw.bear);
-        } else {
-            mediaPlayer1 = MediaPlayer.create(this, R.raw.huuhkaja_norther_eagle_owl);
-        }
-//
-//        if(tag2 == "Elephant"){
-//            mediaPlayer2 = MediaPlayer.create(this, R.raw.elephant);
-//        } else {
-//            mediaPlayer2 = MediaPlayer.create(this, R.raw.peippo_chaffinch);
-//        }
-//
-//        if(tag3 == "Lamp"){
-//            mediaPlayer3 = MediaPlayer.create(this, R.raw.lamb);
-//        } else {
-//            mediaPlayer3 = MediaPlayer.create(this, R.raw.peukaloinen_wren);
-//        }
-//
-//        if(tag4 == "Wolf"){
-//            mediaPlayer1 = MediaPlayer.create(this, R.raw.wolf);
-//        } else {
-//            mediaPlayer1 = MediaPlayer.create(this, R.raw.punatulkku_northern_bullfinch);
-//        }
 
 
         imageView.setOnClickListener(new View.OnClickListener(){
@@ -66,7 +38,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String tag = imageView.getTag().toString();
                 Log.d("Image", "onClick: " + tag);
-                mediaPlayer1.start();
+                if("Bear".equals(tag)){
+                    mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.bear);
+                } else {
+                    mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.punatulkku_northern_bullfinch);
+                }
+                mediaPlayer.start();
             }
         });
 
@@ -75,7 +52,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String tag = imageView2.getTag().toString();
                 Log.d("Image", "onClick: " + tag);
-//                mediaPlayer2.start();
             }
         });
 
@@ -84,7 +60,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String tag = imageView3.getTag().toString();
                 Log.d("Image", "onClick: " + tag);
-//                mediaPlayer3.start();
             }
         });
 
@@ -93,7 +68,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String tag = imageView4.getTag().toString();
                 Log.d("Image", "onClick: " + tag);
-//                mediaPlayer4.start();
             }
         });
     }
