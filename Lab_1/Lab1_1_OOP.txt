@@ -1,0 +1,29 @@
+1. Object:
+Object a combination of variables, functions and data structure that refers to a particular instance of a class.
+
+2. Class:
+Class in Object-oriented programming is 'an extensible program-code-template'/blueprint for creating an objects that provide initial member variables and functions or methods.
+
+3.Instantiation of object:
+Intstantiate an object means its realization by a predefined object. An object that defined could be declared, giving a unique identity so that it could be used later in the program.
+
+4. Visibility (public / private / protected):
+They are access modifiers that help us to implement or hide information.
+• private: only the members of the current class can have access to the method or the field of this class.
+• protected: members of the current class and subclass can have access to the method or the field of this class.
+• public: any class can call the method or refer the field of this class.
+
+5. Member data/methods
+• member data: a variable that is associated with a specific object, avalaible for use by all its method.
+• member method:a behaviour definition of a class it associated.
+
+6. Inheritance:
+Inheritance is the basing of an object or class with respect to another object or class, holding comparable implementation. 
+
+7. Interface: Interface is a description of all functions that an object must have in order to be an "X"
+
+8. Polymorphism: The concept that different classes can be used with the same interface.
+
+9. Overriding: A feature that allows a subclass or child class to provide a specific implementation of a method that is already provided by one of its parent classes
+
+10. Abstract classes: a class that contains abstract methods as well as concrete methods. An abstract class can not be instantiated, which means you are not allowed to create an object of it.
