@@ -1,0 +1,23 @@
+1. What programming languages you can use for Android app development?
+Kotlin and Java
+
+2. What is .apk file?
+the package file format used by the Android operating system for distribution and installation of mobile apps and middleware.
+
+3. How Android system runs apps?
+
+Android system runs app by the principle of least privilege. That is, each app, by default, has access only to the components that it requires to do its work and no more. This creates a very secure environment in which an app cannot access parts of the system for which it is not given permission
+
+4. Name four types of Android components. Describe each.
+
+• Activities: An Android activity is one screen of the Android app's user interface. An Android app may contain one or more activities, meaning one or more screens.
+
+• Services: A component that is used to perform operations on the background such as playing music, handle network transactions, interacting content providers etc. It doesn't has any UI (user interface). The service runs in the background indefinitely even if application is destroyed.
+
+• Broadcast receivers: an Android component which allows you to register for system or application events. All registered receivers for an event are notified by the Android runtime once this event happens.
+
+• Content providers: an Android component to perform inter-process communication, through which data between two apps can be exchanged.
+
+
+5. What is manifest file and what is its purpose?
+An XML file that stores all the essential information about an app to the Android system.
