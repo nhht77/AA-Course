@@ -5,12 +5,12 @@ package trung.nguyen.stockmonitor;
     class Stock {
         private String id;
         private String name;
-        private int value;
+        private double price;
 
-        public Stock(String id, String name, int value) {
+        public Stock(String id, String name, double price) {
             this.id = id;
             this.name = name;
-            this.value = value;
+            this.price = price;
         }
 
         public String getId() {
@@ -29,12 +29,12 @@ package trung.nguyen.stockmonitor;
             this.name = name;
         }
 
-        public int getValue() {
-            return value;
+        public double getPrice() {
+            return price;
         }
 
-        public void setValue(int value) {
-            this.value = value;
+        public void setPrice(double price) {
+            this.price = price;
         }
     }
 
