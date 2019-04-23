@@ -79,15 +79,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void removePressed(EditText editText, ArrayList<String> countries, ArrayAdapter<String> arrayAdapter) {
-        String editTxt = editText.getText().toString().toLowerCase();
+        String editTxt = editText.getText().toString();
         editText.setText(null);
-
-        for (String c : countries) {
-            if (c.contains(editTxt)) {
-                countries.remove(0);
-                arrayAdapter.notifyDataSetChanged();
-            }
-        }
+        countries.remove(editTxt);
+        arrayAdapter.notifyDataSetChanged();
     }
 
     private void addPressed(EditText editText, ArrayList<String> countries, ArrayAdapter<String> arrayAdapter) {
