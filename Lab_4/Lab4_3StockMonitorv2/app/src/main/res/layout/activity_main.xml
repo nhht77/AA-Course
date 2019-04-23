@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ListView
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/stockList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/stockId"
+            android:hint="Stock ID..."
+            app:layout_constraintBottom_toTopOf="@id/stockName"
+            android:layout_marginHorizontal="40dp"/>
+        <EditText
+            app:layout_constraintBottom_toTopOf="@id/addStock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/stockName"
+            android:hint="Stock Name..."
+            android:layout_marginHorizontal="40dp"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/addStock"
+            android:text="Add Stock"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+</android.support.constraint.ConstraintLayout>
